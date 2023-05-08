@@ -11,45 +11,61 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            appBar: AppBar(
-
-            ),
-            body: Container(
-              height: 150,
-              padding: EdgeInsets.all(10),
-              child: Row(
+            backgroundColor: Color(0xFF181818),
+            body: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                      child: Image.asset(
-                          '/Users/hr.r/AndroidStudioProjects/contact/assets/images/clover.jpeg',
-                          width: 150)),
-                  Expanded(
-                      child: Container(
-                          child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  SizedBox(height: 80),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        '캐논 DSLR 100D(단렌즈, 충전기 16기가SD포함)',
-                        style: TextStyle(fontSize: 20, color: Colors.black),
-                      ),
-                      Text(
-                        '금호동3가 끌올 10분 전',
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                      Text(
-                        '100000원',
-                        style: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold),
-                      ),
-                      Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-                        Icon(Icons.favorite_border_outlined),
-                        Text('4')
-                      ]),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            'Hey, Selena',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 28,
+                                fontWeight: FontWeight.w800),
+                          ),
+                          Text(
+                            'Welcome back',
+                            style: TextStyle(
+                                color: Colors.white.withOpacity(0.8),
+                                fontSize: 18),
+                          ),
+                        ],
+                      )
                     ],
-                  )))
+                  ),
+                  SizedBox(
+                    height: 120,
+                  ),
+                  Text('Total Balance',
+                      style: TextStyle(
+                          color: Colors.white.withOpacity(0.8), fontSize: 22)),
+                  SizedBox(height: 5),
+                  Text('\$5 194 482',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 48,
+                          fontWeight: FontWeight.w600)),
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      Container(
+                          decoration: BoxDecoration(color: Colors.amber,borderRadius: BorderRadius.circular(45)),
+                          child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 20, horizontal: 50),
+                              child: Text('Transfer',style: TextStyle(fontSize: 22),)))
+                    ],
+                  )
                 ],
               ),
             )));
   }
 }
-//함수형이 아니고 객체지향이라 리엑트 쓰다보니 객체지향 쓰니까 재밌다.
